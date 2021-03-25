@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="59905eb96591477886df0687ea9eb5c6" Name="Diagram1">
+        <EntityTypeShape EntityType="eticaretModel.tbl_admin" Width="1.5" PointX="1.5" PointY="1.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="eticaretModel.tbl_category" Width="1.5" PointX="3.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="eticaretModel.tbl_product" Width="1.5" PointX="6" PointY="4.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="eticaretModel.tbl_user" Width="1.5" PointX="0.75" PointY="4.5" IsExpanded="true" />
+        <AssociationConnector Association="eticaretModel.FK__tbl_categ__categ__145C0A3F" ManuallyRouted="false" />
+        <AssociationConnector Association="eticaretModel.FK__tbl_produ__produ__1BFD2C07" ManuallyRouted="false" />
+        <AssociationConnector Association="eticaretModel.FK__tbl_produ__produ__1CF15040" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="eticaretModel.sysdiagram" Width="1.5" PointX="6.375" PointY="0.75" />
+        <EntityTypeShape EntityType="eticaretModel.tbl_invoice" Width="1.5" PointX="8.25" PointY="4.875" />
+        <EntityTypeShape EntityType="eticaretModel.tbl_order" Width="1.5" PointX="10.5" PointY="4.375" />
+        <AssociationConnector Association="eticaretModel.FK__tbl_invoi__in_fk__36B12243" />
+        <AssociationConnector Association="eticaretModel.FK__tbl_order__o_fk___3B75D760" />
+        <AssociationConnector Association="eticaretModel.FK__tbl_order__o_fk___398D8EEE" />
+        <AssociationConnector Association="eticaretModel.FK__tbl_order__o_fk___3A81B327" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

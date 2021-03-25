@@ -1,0 +1,78 @@
+﻿
+@{
+    ViewBag.Title = "checkout";
+    Layout = "~/Views/Shared/_Layout1.cshtml";
+}
+
+<h2>Sepet</h2>
+
+@if (TempData["Cart"] != null)
+{
+
+
+    <table class="table table-responsive">
+
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Ürün Adı</th>
+                <th>Fiyat</th>
+                <th>Adet</th>
+                <th>Ödenecek Tutar</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in TempData["Cart"] as List<Kimyon.Models.Cart>)
+            {
+
+                <tr>
+                    <td>@item.product_id</td>
+                    <td>@item.product_name</td>
+                    <td>@item.price</td>
+                    <td>@item.qty</td>
+                    <td>@item.bill</td>
+                    <td>
+                        <a class="btn btn-danger btn-sm" href="@Url.Action("remove", new { id = item.product_id })"> &#10008</a>
+                    </td>
+
+                </tr>
+
+            }
+
+        </tbody>
+
+        <tfoot>
+            <tr>
+                <td colspan="4"></td>
+                <td>@TempData["total"]</td>
+
+            </tr>
+        </tfoot>
+
+    </table>
+
+
+
+
+
+}
+else
+{
+    <h2 style="color:red"> Sepetinizde ürün bulunmamaktadır</h2>
+    @Html.ActionLink("Geriye dön", "Index", "User")
+}
+
+@if (TempData["Cart"] != null)
+{
+    using (Html.BeginForm())
+
+    {
+        <input type="submit" value="Şimdi Öde" class="btn btn-primary" />
+    }
+}
+
+
+
+
+
+
